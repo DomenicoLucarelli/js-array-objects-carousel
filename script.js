@@ -57,11 +57,31 @@ downArrowEl.addEventListener('click', scrollDown);
 
 upArrowEl.addEventListener('click', scrollUp);
 
-let autoDownScroll = setInterval(scrollDown , 3000);
+// let autoDownScroll = setInterval(scrollDown , 3000);
+
+let startEl = document.getElementById('start');
+let stoptEl = document.getElementById('stop');
+let reverseEl = document.getElementById('reverse');
+
+startEl.addEventListener('click', function(){
+    let autoScroll = setInterval(scrollDown, 3000)
+    
+    stoptEl.addEventListener('click', function(){
+        clearInterval(autoScroll)
+        
+    })
+    
+})
 
 
+reverseEl.addEventListener('click', function(){
+    let reverseScroll = setInterval(scrollUp, 3000);
 
-
+    stoptEl.addEventListener('click', function(){
+        clearInterval(reverseScroll)
+        
+    })
+})
 
 
 
@@ -113,6 +133,7 @@ function scrollDown(){
         thumbImages[images.length - 1].classList.remove('active');
 
     }
+    
 }
 
 
@@ -149,4 +170,5 @@ function scrollUp(){
 
 
     }
+
 }
