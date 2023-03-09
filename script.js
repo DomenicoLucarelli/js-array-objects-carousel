@@ -29,6 +29,9 @@ let downArrowEl = document.getElementById('downArrow');
 let index = 0;
 let titleEl = document.getElementById('title');
 let textEl = document.getElementById('text');
+let startEl = document.getElementById('start');
+let stoptEl = document.getElementById('stop');
+let reverseEl = document.getElementById('reverse');
 
 
 
@@ -48,7 +51,6 @@ titleEl.innerHTML = images[index].title;
 
 textEl.innerHTML = images[index].text;
 
-
 let thumbImages = document.querySelectorAll('.thumbStyle');
 
 thumbImages[index].classList.add('active');
@@ -59,10 +61,6 @@ upArrowEl.addEventListener('click', scrollUp);
 
 // let autoDownScroll = setInterval(scrollDown , 3000);
 
-let startEl = document.getElementById('start');
-let stoptEl = document.getElementById('stop');
-let reverseEl = document.getElementById('reverse');
-
 startEl.addEventListener('click', function(){
     let autoScroll = setInterval(scrollDown, 3000)
     
@@ -72,7 +70,6 @@ startEl.addEventListener('click', function(){
     })
     
 })
-
 
 reverseEl.addEventListener('click', function(){
     let reverseScroll = setInterval(scrollUp, 3000);

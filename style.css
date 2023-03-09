@@ -101,6 +101,7 @@ body{
     bottom: 0;
     left: 0;
     text-align: end;
+    padding-right: 10px;
 }
 
 #text{
