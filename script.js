@@ -57,6 +57,10 @@ downArrowEl.addEventListener('click', scrollDown);
 
 upArrowEl.addEventListener('click', scrollUp);
 
+let autoDownScroll = setInterval(scrollDown , 3000);
+
+
+
 
 
 
