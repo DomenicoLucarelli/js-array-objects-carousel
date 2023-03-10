@@ -72,6 +72,8 @@ for(let j=0; j<thumbImages.length; j++){
         }
         thumbImages[j].classList.add('active')
         imageEl.src = images[j].image;
+        titleEl.innerHTML = images[j].title;
+        textEl.innerHTML = images[j].text;
         index=j
         
 
