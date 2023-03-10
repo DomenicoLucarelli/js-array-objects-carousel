@@ -66,12 +66,13 @@ for(let j=0; j<thumbImages.length; j++){
 
     thumbImages[j].addEventListener('click', function(){
         
-        for( i= 0 ; i< thumbImages.length; i++){
-            thumbImages[i].classList.remove('active');
+        for( x= 0 ; x < thumbImages.length; x++){
+            thumbImages[x].classList.remove('active');
 
         }
         thumbImages[j].classList.add('active')
         imageEl.src = images[j].image;
+        index=j
         
 
     })
@@ -118,6 +119,7 @@ reverseEl.addEventListener('click', function(){
 // ---------------------FUNCTIONS------------------------------
 
 function scrollDown(){
+    
     index++ ;
 
     if(index <= images.length - 1){
@@ -135,6 +137,7 @@ function scrollDown(){
 
 
     }else{
+        
         index = 0 ;
 
         imageEl.src = images[index].image;
@@ -153,6 +156,7 @@ function scrollDown(){
 
 
 function scrollUp(){
+    
     index--
 
     if(index < 0){
