@@ -45,6 +45,8 @@ for(let i=0; i< images.length; i++){
 }
 
 
+
+
 imageEl.src = images[index].image;
 
 titleEl.innerHTML = images[index].title;
@@ -58,6 +60,22 @@ thumbImages[index].classList.add('active');
 downArrowEl.addEventListener('click', scrollDown);
 
 upArrowEl.addEventListener('click', scrollUp);
+
+
+for(let j=0; j<thumbImages.length; j++){
+
+    thumbImages[j].addEventListener('click', function(){
+        
+        for( i= 0 ; i< thumbImages.length; i++){
+            thumbImages[i].classList.remove('active');
+
+        }
+        thumbImages[j].classList.add('active')
+        imageEl.src = images[j].image;
+        
+
+    })
+}
 
 // let autoDownScroll = setInterval(scrollDown , 3000);
 
